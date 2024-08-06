@@ -1,0 +1,147 @@
+:root{
+    --cor-fundo:#000000;
+    --cor-secundaria:#F6F6F6;
+    --cor--destaque:#22D4FD;
+    --cor-hover:#272727;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Krona One;
+}
+
+body{    
+    /* height: 100vh; */
+    box-sizing: border-box; /*o elemento filho não ficará dentro do elemento pai*/
+    background-color: var(--cor-fundo);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+    padding: 5% 0% 0% 15%;
+    
+}
+
+.cabecalho-menu{
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho-menu-link{
+    font-size: 1.25rem;
+    color: var(--cor--destaque);
+    text-decoration: none;
+}
+
+.titulo-destaque {
+    color: var(--cor--destaque);
+}
+
+.apresentacao{ /*tag PAI configurações para todos elementos que estão dentro dele(filhos)*/
+   
+    padding: 5% 15%;
+    display: flex;
+    align-items: center; /*itens alinhados no centro*/
+    justify-content: space-between;
+    gap: 80px;
+    
+}
+
+.apresentacao__conteudo{
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.titulo{
+    font-size: 2.25rem;  
+    font-family: krona one;
+}
+
+.paragrafo{
+    font-size: 1.5rem;
+    font-family: Montserrat;
+    padding: 10px 
+}
+
+.botoes-novos{
+    font-size: 1.4rem;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column; /*config para deixar o itens na vertical*/
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    margin-top: 30px;
+}
+
+.botoes-novos{
+    font-size: 1.25rem;
+    color: var(--cor--destaque);
+}
+
+
+.link{
+    /*background-color: #22D4FD;*/
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: Montserrat;
+    border: 2px solid var(--cor--destaque);
+    display: flex;
+    justify-content: center;
+    gap: 15px;  
+        
+}
+
+.link:hover{
+    background-color:var(--cor-hover);
+    transition: 0.5;
+}
+
+.apresentacao-imagem{
+    width: 50%;
+    
+}
+
+.rodape{
+    color:var(--cor-fundo);
+    background-color:var(--cor--destaque);
+    padding: 24px;
+    text-align: center;
+    font-size: 1.5rem;
+    
+}
+
+/* parte para responsividade da página  */
+@media (max-width: 1200px){
+
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho-menu{
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+        text-align: center;
+    }
+
+}
+
